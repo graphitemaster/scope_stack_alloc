@@ -21,8 +21,8 @@ Just include *"scope_stack_alloc.h"* and make a stack object.
     }
 
 It's a well known limitation that *setjmp* and *longjmp* will ignore calling
-destructors of local stack allocated objecte, scope_stack_alloc can deal with
-this as well.
+destructors of local stack allocated objects, scope_stack_alloc can deal with
+this by taking advantage of manual scope guard functions and `cleanup`
 
     #include <setjmp.h>
     #include "scope_stack_alloc.h"
