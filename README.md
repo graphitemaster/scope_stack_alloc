@@ -52,7 +52,7 @@ this by taking advantage of manual scope guard functions and `cleanup`
     }
 
 ### Frames
-The manual scope scope guard function `enter` returns a *frame* index which can
+The manual scope guard function `enter` returns a *frame* index which can
 be passed to `leave` to leave that scope. Similarly; `cleanup` optionally takes
 a frame index which it uses as the offset into all currently active frames to
 purge them.
