@@ -65,7 +65,7 @@ There are some limitations
 The manual scope guard function `enter` returns a *frame-index* which can
 be passed to `leave` to leave that scope. Similarly; `cleanup` optionally takes
 a *frame-index*, all active frames from **one-past** this index passed will be
-purged (all active objects of those frames will be stroyted.) This is useful for
+purged (all active objects of those frames will be destroyed.) This is useful for
 quick *tear-down* situations where the approprate calls to `leave` were not
 made causing the frame to leak resources (`longjmp` for example.)
 
