@@ -27,7 +27,7 @@ this by taking advantage of manual scope guard functions and `cleanup`
     #include <setjmp.h>
     #include "scope_stack_alloc.h"
 
-    static jump_buf gJump;
+    static jmp_buf gJump;
     static stack<(1<<20)> gStack; // 1MB
 
     void test(bool jumpOut) {
