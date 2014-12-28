@@ -47,11 +47,12 @@ Just include *"scope_stack_alloc.h"* and make a stack object.
     static stack<(1<<20)> gStack; // 1MB
 
     int main() {
-        gStack || [&]() {
-            auto &it = gStack.acquire<std::vector<int>>(); // Or acquire<std::vector<int>>(gStack);
+        gStack || [&]() { // Or gStack.enter();
+            auto &it = gStack.acquire<std::vector<int>>();
+            // Or acquire<std::vector<int>>(gStack);
             it.push_back(100);
             /// ...
-        };
+        }; // Implicit gStack.leave() here
     }
 
 ### Limitations
