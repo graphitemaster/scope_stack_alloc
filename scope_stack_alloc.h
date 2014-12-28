@@ -129,4 +129,10 @@ private:
     unsigned char *sp;
 };
 
+// Utility
+template <typename T, std::size_t E>
+T &acquire(stack<E> &s) {
+    return s.template acquire<T>();
+}
+
 #endif

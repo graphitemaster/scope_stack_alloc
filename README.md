@@ -32,7 +32,7 @@ this by taking advantage of manual scope guard functions and `cleanup`
 
     void test(bool jumpOut) {
         gStack.enter(); // Manual scope guard
-        auto &it = gStack.acquire<std::vector<int>());
+        auto &it = gStack.acquire<std::vector<int>>();
         it.push_back(100);
         // ...
         if (jumpOut)
