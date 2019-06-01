@@ -71,4 +71,4 @@ quick *tear-down* situations where the approprate calls to `leave` were not
 made causing the frame to leak resources (`longjmp` for example.)
 
 ### Resources
-http://dice.se/publications/scope-stack-allocation/
+https://www.ea.com/frostbite/news/scope-stack-allocation
